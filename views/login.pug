@@ -1,0 +1,8 @@
+extends layout
+block content
+    form(action="/login" , method="post" , style="display:flex; flex-direction:column; width:200px; margin:auto; margin-bottom:30px;")
+        label(for="username") Username
+        input#username(type="text" name="username" style="display:block;")
+        label(for="password") Password
+        input#password(type="password" name="password" style="display:block;")
+        button Login

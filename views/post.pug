@@ -1,0 +1,10 @@
+extends layout
+block css
+    link(rel="stylesheet", href="/css/search.css")
+block content
+        if post
+        .container
+            p(style="text-align:center;") #{post.title}
+            p#body !{post.body}
+
+    

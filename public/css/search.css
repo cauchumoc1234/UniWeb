@@ -1,0 +1,21 @@
+.container{
+    margin:auto;
+    width: 80%;
+}
+.item{
+    min-height: 30px;
+    border:1px solid gray;
+    margin-bottom:10px;
+}
+.item a{
+    color: blue;
+    display: block;
+    margin-left: 20px;
+}
+#body img{
+    width: 100%;
+}
+#body{
+    font-size:11px;
+    line-height: 16px;
+}

@@ -1,0 +1,10 @@
+extends layout
+block css
+    link(rel="stylesheet", href="/css/search.css")
+block content
+    .container
+        if posts
+            each post in posts
+                .item
+                    a(href="/post?id="+ post._id) #{post.title}
+                        

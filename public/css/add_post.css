@@ -1,0 +1,16 @@
+
+label{
+    color:red;
+}
+#add{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    max-width: 80%;
+}
+
+#body{
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px; 
+}

@@ -1,0 +1,58 @@
+extends layout
+block css
+    link(rel="stylesheet", href="/css/add_post.css")
+block content
+    form#add(action="/add-post" method="post")
+        label Title
+        input(type="text" name="title")
+        label Body
+        textarea#body(name="body", cols="50", rows="300")
+        label Topic
+        .topic
+            label Giới thiệu
+            input(type="checkbox" name="topic" value="giới thiệu")
+            label Quy chế tổ chức
+            input(type="checkbox" name="topic" value="quy chế tổ chức")
+            label Cơ cấu tổ chức
+            input(type="checkbox" name="topic" value="cơ cấu tổ chức")
+            label Tổ chức đoàn thể
+            input(type="checkbox" name="topic" value="tổ chức đoàn thể")
+            label Nội quy lao động
+            input(type="checkbox" name="topic" value="nội quy lao động")
+            label Tuyển sinh
+            input(type="checkbox" name="topic" value="tuyển sinh")
+            label Thông tin tuyển sinh
+            input(type="checkbox" name="topic" value="thông tin tuyển sinh")
+            label Tuyển sinh đại học
+            input(type="checkbox" name="topic" value="tuyển sinh đại học")
+            label Tuyển sinh sau đại học
+            input(type="checkbox" name="topic" value="tuyển sinh sau đại học")
+            label Đào tạo ngắn hạn
+            input(type="checkbox" name="topic" value="đào tạo ngắn hạn")
+            label Sinh viên
+            input(type="checkbox" name="topic" value="sinh viên")
+            label Thông báo
+            input(type="checkbox" name="topic" value="thông báo")
+            label Học phí, học bổng
+            input(type="checkbox" name="topic" value="học phí, học bổng")
+            label Cơ hội việc làm
+            input(type="checkbox" name="topic" value="cơ hội việc làm")
+            label Thủ tục hành chính
+            input(type="checkbox" name="topic" value="thủ tục hành chính")
+            label Hợp tác-Liên kết
+            input(type="checkbox" name="topic" value="hợp tác-Liên kết")
+            label Hợp tác quốc tế
+            input(type="checkbox" name="topic" value="hợp tác quốc tế")
+            label Hợp tác trong nước
+            input(type="checkbox" name="topic" value="hợp tác trong nước")
+            label Đào tạo
+            input(type="checkbox" name="topic" value="đào tạo")
+            label Các hệ đào tạo
+            input(type="checkbox" name="topic" value="các hệ đào tạo")
+            label Lịch đào tạo
+            input(type="checkbox" name="topic" value="lịch đào tạo")
+            label Nghiên cứu khoa học
+            input(type="checkbox" name="topic" value="nghiên cứu khoa học")
+            label Khác
+            input(type="checkbox" name = "topic" value="Khác")
+        button ADD

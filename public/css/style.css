@@ -1,0 +1,156 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.header{
+    width: 80%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.top{
+    display: flex;
+    justify-content: center;
+
+}
+.top .logo{
+    display: block;
+    max-width: 50%;
+}
+.top .logo img{
+    max-width: 100%;
+}
+.search-box{
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+ul{
+    list-style-type: none;
+}
+.row-menu{
+    display: flex;
+    padding:0;
+}
+li{
+    background-color: rgb(62, 57, 133);
+    transition: background-color 0.2s;
+}
+.row-menu li{
+    flex-grow: 1;
+
+    text-align: center;
+    padding :5px;
+    
+}
+.option{
+    border-right: 1px solid gray;
+}
+.drop-down{
+    position: relative;
+}
+li:hover{
+    background-color: rgb(130, 137, 235);
+}
+
+.child-menu{
+    display: none;
+    padding:0;
+    width: 100%;
+
+}
+.drop-down:hover .child-menu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.information{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.information .child{
+    flex-grow: 1;
+    max-width: 33%;
+
+}
+.child h2{
+    margin: 0 5px 0 5px;
+    border-bottom: 1px solid gray;
+}
+.child a{
+    font-size:10px;
+    color: black;
+}
+.child a:hover{
+    text-decoration:underline;
+}
+.item{
+    margin: 0 10px 0 5px;
+    border-bottom : 1px solid gray;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 0;
+    
+}
+
+.info-2{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.item a img{
+    float: left;
+    margin-top:5px;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+.media{
+    width: 80%;
+    display: flex;
+    margin:0 auto;
+    max-height: 250px;
+    justify-content: space-between;
+    margin-top:20px;
+}
+.media img{
+    max-width: 45%;
+}
+iframe{
+    /* height: 100%;
+    width: 50%; */
+}
+.footer{
+    display: flex;
+    background-color: rgb(36, 70, 143);
+    color: aliceblue;
+    width: 80%;
+    margin:auto;
+}
+
+.row{
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-around;
+}
+.address{
+    text-align: center;
+}
+h4,h5{
+    margin:8px 0;
+}
+.map{
+    flex-grow: 1;
+}
+.col a{
+    display: block;
+    font-size:11px;
+}
+.more-info{
+    flex-grow: 3;
+}
