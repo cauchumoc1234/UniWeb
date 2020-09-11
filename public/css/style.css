@@ -12,14 +12,15 @@ a{
 .top{
     display: flex;
     justify-content: center;
-
+    flex-direction: row;
+    max-height: 150px;
 }
 h2{
     text-align: center;
 }
 .top .logo{
     display: block;
-    max-width: 50%;
+    max-width: 60%;
 }
 .top .logo img{
     max-width: 100%;
