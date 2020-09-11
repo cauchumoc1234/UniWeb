@@ -3,10 +3,11 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet', href='css/style.css')
-  block css
     title Document
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/css/style.css' type="text/css")
+    block css
+    
   body
     .header
       .top
@@ -20,12 +21,12 @@ html(lang='en')
         li.option
           a(href='/') Trang chủ
         li.drop-down.option
-          a(href='/post?q=gioi-thieu') Giới thiệu
+          a(href='/post?id=5f54f9726ef9a535a0ff8f48') Giới thiệu
           ul.child-menu
             li
               a(href='/post?id=5f54aa0f907978310c369e63') Quy chế tổ chức
         li.option.drop-down
-          a(href='') Tuyển sinh
+          a(href='/search?q=tuyen sinh') Tuyển sinh
           ul.child-menu
             li
               a(href='') Thông tin tuyển sinh
@@ -36,59 +37,56 @@ html(lang='en')
             li
               a(href='') Đào tạo ngắn hạn
         li.option.drop-down
-          a(href='') Sinh viên
+          a(href='/search?q=sinh vien') Sinh viên
           ul.child-menu
             li
-              a(href='') Thông báo
+              a(href='/search?q=hoc phi hoc bong') Học phí, học bổng
             li
-              a(href='') Học phí, học bổng
-            li
-              a(href='') Cơ hội việc làm
+              a(href='/search?q=co hoi viec lam') Cơ hội việc làm
             li
               a(href='') Thủ tục hành chính
         li.option.drop-down
-          a(href='') Hợp tác-Liên kết
+          a(href='/post/5f59e520c790e859b4a57462') Hợp tác-Liên kết
           ul.child-menu
             li
-              a(href='') Hợp tác quốc tế
+              a(href='/search?q=hop tac quoc te') Hợp tác quốc tế
             li
-              a(href='') Hợp tác trong nước
+              a(href='/search?q=hop tac trong nuoc') Hợp tác trong nước
         li.option.drop-down
-          a(href='') Đào tạo
+          a(href='/search?q=dao tao') Đào tạo
           ul.child-menu
             li
-              a(href='') Các hệ đào tạo
+              a(href='/post/5f59e343c790e859b4a5745d') Các hệ đào tạo
             li
-              a(href='') Lịch đào tạo
+              a(href='/search?q=lich dao tao') Lịch đào tạo
     block content
     .footer
       .more-info
         .row
           .col
             h4 Giới thiệu
-            a(href='') Giới thiệu chung
-            a(href='') Quyết định thành lập
+            a(href='/search?q=gioi thieu') Giới thiệu chung
+            a(href='/search?q=') Quyết định thành lập
             a(href='/post?id=5f54aa0f907978310c369e63') Quy chế tổ chức
-            a(href='') Cơ cấu tổ chức
+            a(href='/search?q=') Cơ cấu tổ chức
           .col
             h4 Đào tạo
-            a(href='') Giới thiệu các hệ đào tạo
-            a(href='') Quy chế đào tạo
-            a(href='') Chương trình đào tạo
-            a(href='') Lịch giảng dạy
+            a(href='/search?q=') Giới thiệu các hệ đào tạo
+            a(href='/search?q=dao tao') Quy chế đào tạo
+            a(href='/search?q=dao tao') Chương trình đào tạo
+            a(href='/search?q=lich dao tao') Lịch giảng dạy
           .col
             h4 Đào tạo
-            a(href='') Thông tin tuyển sinh
+            a(href='/search?q=') Thông tin tuyển sinh
           .col
             h4 Quản lý cán bộ
-            a(href='') Lịch công tác tuần
-            a(href='') Văn phòng trực tuyến
-            a(href='') Quản lý cán bộ công chức
-            a(href='') Hòm thư
-            a(href="/login") Thêm bài viết
+            a(href='/search?q=') Văn phòng trực tuyến
+            a(href='/search?q=') Quản lý cán bộ công chức
+            a(href='/search?q=') Hòm thư
+            a(href="/add-post") Thêm bài viết
         .address
           h4 TRƯỜNG CAO ĐẲNG DU LỊCH HÀ NỘI
           h5 Địa chỉ : 236 Hoàng Quốc Việt, Phường Cổ Nhuế 1, Q. Bắc Từ Liêm, Hà Nội
       .map
-        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8745827532334!2d105.77925791479453!3d21.037703685993474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b55b011e49%3A0x9406c12dc4604160!2zxJDhuqFpIGjhu41jIFF14buRYyBnaWEgSMOgIE7hu5lpIChWTlUp!5e0!3m2!1svi!2s!4v1599128407035!5m2!1svi!2s', width='500px', height='100', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8745827532334!2d105.77925791479453!3d21.037703685993474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b55b011e49%3A0x9406c12dc4604160!2zxJDhuqFpIGjhu41jIFF14buRYyBnaWEgSMOgIE7hu5lpIChWTlUp!5e0!3m2!1svi!2s!4v1599128407035!5m2!1svi!2s', width='200', height='200', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
 block script

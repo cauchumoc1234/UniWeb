@@ -1,10 +1,10 @@
 extends layout
 block css
-    link(rel="stylesheet", href="/css/search.css")
+    link(rel="stylesheet", href="/css/search.css" type="text/css")
 block content
         if post
-        .container
-            p(style="text-align:center;") #{post.title}
-            p#body !{post.body}
+            .container
+                p #{post.title}
+                div.content !{post.body}
 
     

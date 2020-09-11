@@ -5,7 +5,8 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 var db = require('./db');
 var auth_middleware = require('./middlewares/auth.middleware')
-app.use(express["static"]("public"));
+var filter_middleware = require('./middlewares/filter_topic')
+app.use(express.static('public'))
 
 var User = require('./models/user.model')
 var Post = require('./models/post.model')
@@ -20,7 +21,18 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.get('/', (req, res) => {
-    res.render("home");
+     Post.find({},"_id title topic",(err,result)=>{
+      res.render("home" , {
+        //we only need 4 post for each topic
+        thongbao:filter_middleware.filter(result,"thong bao").slice(0,4),
+        tintuc: filter_middleware.filter(result,"tin tuc").slice(0,4),
+        tuyensinh: filter_middleware.filter(result,"tuyen sinh").slice(0,4),
+        nghiencuukhoahoc: filter_middleware.filter(result,"nghien cuu khoa hoc").slice(0,4),
+        hoptac: filter_middleware.filter(result,"hop tac lien ket").slice(0,4),
+        danhmuc: filter_middleware.filter(result,"danh muc").slice(0,4) 
+    });
+    })
+
   })
 app.get('/login',(req,res)=>{
   res.render('login')
@@ -49,10 +61,16 @@ app.post('/add-post',(req,res)=>{
   res.redirect('add-post')
 })
 app.get('/search',function(req,res){
-  Post.find({$or: [{title:{$regex:req.query.q,$options:"$i"}},{topic:{$regex:req.query.q,$options:"$i"}}]},"title body",function(err,posts){
+  Post.find({$or: [{title:{$regex:req.query.q,$options:"$i"}},{topic:{$regex:req.query.q,$options:"$i"}}]},"_id title body",function(err,posts){
      res.render('search',{posts:posts})
-    
   })
+})
+app.get('/post/:id',function(req,res){
+  
+  Post.find({_id : req.params.id },"title body",function(err,posts){
+    res.render('post',{post:posts[0]})
+  })
+  // res.redirect('/post')
 })
 app.get('/post',function(req,res){
   Post.find({_id : req.query.id },"title body",function(err,posts){

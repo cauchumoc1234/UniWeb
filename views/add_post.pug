@@ -7,52 +7,59 @@ block content
         input(type="text" name="title")
         label Body
         textarea#body(name="body", cols="50", rows="300")
+        label Image tag
+        button(type="button")#addImg Add
+        small Khi thêm thẻ ảnh ở body sẽ hiện dạng (img src = '' alt ='') với src là link ảnh,alt là chữ thay thế khi ảnh bị lỗi
         label Topic
         .topic
             label Giới thiệu
-            input(type="checkbox" name="topic" value="giới thiệu")
+            input(type="checkbox" name="topic" value="gioi thieu")
             label Quy chế tổ chức
-            input(type="checkbox" name="topic" value="quy chế tổ chức")
+            input(type="checkbox" name="topic" value="quy che to chuc")
             label Cơ cấu tổ chức
-            input(type="checkbox" name="topic" value="cơ cấu tổ chức")
+            input(type="checkbox" name="topic" value="co cau to chuc")
             label Tổ chức đoàn thể
-            input(type="checkbox" name="topic" value="tổ chức đoàn thể")
+            input(type="checkbox" name="topic" value="to chuc doan the")
             label Nội quy lao động
-            input(type="checkbox" name="topic" value="nội quy lao động")
+            input(type="checkbox" name="topic" value="noi quy lao dong")
             label Tuyển sinh
-            input(type="checkbox" name="topic" value="tuyển sinh")
+            input(type="checkbox" name="topic" value="tuyen sinh")
             label Thông tin tuyển sinh
-            input(type="checkbox" name="topic" value="thông tin tuyển sinh")
+            input(type="checkbox" name="topic" value="thong tin tuyen sinh")
             label Tuyển sinh đại học
-            input(type="checkbox" name="topic" value="tuyển sinh đại học")
+            input(type="checkbox" name="topic" value="tuyen sinh dai hoc")
             label Tuyển sinh sau đại học
-            input(type="checkbox" name="topic" value="tuyển sinh sau đại học")
+            input(type="checkbox" name="topic" value="tuyen sinh sau dai hoc")
             label Đào tạo ngắn hạn
-            input(type="checkbox" name="topic" value="đào tạo ngắn hạn")
+            input(type="checkbox" name="topic" value="dao tao ngan han")
             label Sinh viên
-            input(type="checkbox" name="topic" value="sinh viên")
+            input(type="checkbox" name="topic" value="sinh vien")
             label Thông báo
-            input(type="checkbox" name="topic" value="thông báo")
+            input(type="checkbox" name="topic" value="thong bao")
             label Học phí, học bổng
-            input(type="checkbox" name="topic" value="học phí, học bổng")
+            input(type="checkbox" name="topic" value="hoc phi hoc bong")
             label Cơ hội việc làm
-            input(type="checkbox" name="topic" value="cơ hội việc làm")
+            input(type="checkbox" name="topic" value="co hoi viec lam")
             label Thủ tục hành chính
-            input(type="checkbox" name="topic" value="thủ tục hành chính")
+            input(type="checkbox" name="topic" value="thu tuc hanh chinh")
             label Hợp tác-Liên kết
-            input(type="checkbox" name="topic" value="hợp tác-Liên kết")
+            input(type="checkbox" name="topic" value="hop tac lien ket")
             label Hợp tác quốc tế
-            input(type="checkbox" name="topic" value="hợp tác quốc tế")
+            input(type="checkbox" name="topic" value="hop tac quoc te")
             label Hợp tác trong nước
-            input(type="checkbox" name="topic" value="hợp tác trong nước")
+            input(type="checkbox" name="topic" value="hop tac trong nuoc")
             label Đào tạo
-            input(type="checkbox" name="topic" value="đào tạo")
+            input(type="checkbox" name="topic" value="dao tao")
             label Các hệ đào tạo
-            input(type="checkbox" name="topic" value="các hệ đào tạo")
+            input(type="checkbox" name="topic" value="cac he dao tao")
             label Lịch đào tạo
-            input(type="checkbox" name="topic" value="lịch đào tạo")
+            input(type="checkbox" name="topic" value="lich dao tao")
             label Nghiên cứu khoa học
             input(type="checkbox" name="topic" value="nghiên cứu khoa học")
+            label Tin tức
+            input(type="checkbox", name="topic" value="tin tuc")
             label Khác
-            input(type="checkbox" name = "topic" value="Khác")
-        button ADD
+            input(type="checkbox" name = "topic" value="khac")
+        input(type="submit", value="Add")
+block script
+    script(src="/script/add_image.js")

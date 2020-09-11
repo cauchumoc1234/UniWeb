@@ -1,5 +1,6 @@
 .container{
     margin:auto;
+    margin-bottom: 20px;
     width: 80%;
 }
 .item{
@@ -12,10 +13,19 @@
     display: block;
     margin-left: 20px;
 }
-#body img{
-    width: 100%;
+.container p{
+    margin:auto; 
+    width:80%; 
+    font-size:20px; 
+    text-align:center;
 }
-#body{
+.content{
     font-size:11px;
     line-height: 16px;
+}
+.content img{
+    display: block;
+    width: 70%;
+    object-fit: contain;
+    margin: 10px auto;
 }
