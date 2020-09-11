@@ -10,8 +10,9 @@ app.use(express.static('public'))
 
 var User = require('./models/user.model')
 var Post = require('./models/post.model')
+
 //khởi tạo
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000 , () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
   //view engine
