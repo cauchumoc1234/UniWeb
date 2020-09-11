@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000 //cổng chạy localhost
+const port = process.env.PORT || 3000 //cổng chạy localhost
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 var db = require('./db');
@@ -12,7 +12,7 @@ var User = require('./models/user.model')
 var Post = require('./models/post.model')
 
 //khởi tạo
-app.listen(process.env.PORT || 3000 , () => {
+app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
   //view engine
