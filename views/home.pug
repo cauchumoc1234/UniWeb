@@ -15,14 +15,14 @@ block content
               each post in tintuc
                 .item
                   a(href='/post/'+ post._id) #{post.title}
-          a(href='/search?q=tin tức', style='font-style: italic;') Xem tất cả
+          a(href='/search?q=tin tuc', style='font-style: italic;') Xem tất cả
         .college-entrance.child
           h2 Tuyển sinh
           if tuyensinh
               each post in tuyensinh
                 .item
                   a(href='/post/'+ post._id) #{post.title}
-          a(href='/search?q=tuyển sinh', style='font-style: italic;') Xem tất cả
+          a(href='/search?q=tuyen sinh', style='font-style: italic;') Xem tất cả
       .media
         img(src='/sinhvien1.jpg', alt='anh1')
         img(src='/sinhvien2.jpg', alt='anh2')
@@ -33,14 +33,14 @@ block content
               each post in nghiencuukhoahoc
                 .item
                   a(href='/post/'+ post._id) #{post.title}
-          a(href='/search?q=nghiên cứu khoa học', style='font-style: italic;') Xem tất cả
+          a(href='/search?q=nghien cuu khoa hoc', style='font-style: italic;') Xem tất cả
         .news.child
           h2 Hợp tác-liên kết
           if hoptac
               each post in hoptac
                 .item
                   a(href='/post'+ post._id) #{post.title}
-          a(href='/search?q=hợp tác liên kết', style='font-style: italic;') Xem tất cả
+          a(href='/search?q=hop tac lien ket', style='font-style: italic;') Xem tất cả
         .college-entrance.child
           h2 Danh mục
           if danhmuc
